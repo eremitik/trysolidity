@@ -348,11 +348,11 @@ contract MyContract {
     }
     
     function withdraw() external contractIsActive() {
-        
+        // do withdrawals
     }
     
     receive() external payable contractIsActive {
-        
+        // do things
     }
     
     modifier contractIsActive() {
