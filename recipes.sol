@@ -1,7 +1,6 @@
 pragma solidity ^0.6.0;
 
 //Combine multiple contract tx into one contract
-
 contract Utils {
     function groupExecute(uint argA, uint argB) external {
         ContractA(0x....).foo(argA);
@@ -22,9 +21,7 @@ contract ContractB {
 }
 
 
-//Factory-Child pattern
-pragma solidity ^0.6.0;                          
-                                                 
+//Factory-Child pattern                                                
 contract Factory {                               
     Child[] public children;                     
     event ChildCreated(                          
