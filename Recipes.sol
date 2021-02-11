@@ -47,3 +47,30 @@ contract Child {
     }                                            
 }                                                
 
+
+
+// When you want to re-order an array
+contract Reorder {
+    
+    string[] public data;
+    
+    constructor() public {
+        data.push("John");
+        data.push("Bruce");
+        data.push("Tom");
+        data.push("Bart");
+        data.push("Cherry");
+    }
+    
+    function removeNoOrder(uint index) external {
+        data[index] = data[data.length-1];
+        data.pop();
+    }
+    
+    function removeInOrder(uint index) external {
+        for(uint i=index; i<data.length-1; i++){
+            data[i] = data[i+1];
+        }
+        data.pop();
+    }
+}
